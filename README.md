@@ -1,2 +1,2 @@
-# int-prog excercise
+# int-prog exercise
 

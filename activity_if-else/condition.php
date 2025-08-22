@@ -1,57 +1,63 @@
 <?php
 
+// Function 1: IF statement — checks if age is 18 or older
 function checkAge($age) {
     if ($age >= 18) {
         return "You are an adult.";
-    } else {
-        return "You are a minor.";
     }
+    return "You are a minor.";
 }
 
+// Function 2: IF...ELSE statement — checks temperature
 function checkTemperature($temperature) {
-    if ($temperature > 37) {
-        return "It's hot!";
+    if ($temperature > 37.5) {
+        return "You have a high temperature.";
     } else {
-        return "It's not too hot.";
+        return "Your temperature is normal.";
     }
 }
 
-function evaluateScore($score) {
-    if ($score >= 90) {
-        return "Excellent!";
-    } elseif ($score >= 70) {
-        return "Good job!";
-    } elseif ($score >= 50) {
-        return "You're getting there!";
+// Function 3: IF...ELSEIF...ELSE statement — checks marital status
+function checkMaritalStatus($maritalStatus) {
+    $status = strtolower($maritalStatus);
+    if ($status === "single") {
+        return "You are single.";
+    } elseif ($status === "married") {
+        return "You are married.";
+    } elseif ($status === "divorced") {
+        return "You are divorced.";
     } else {
-        return "Keep practicing.";
+        return "Marital status not recognized.";
     }
 }
 
-function getDayMessage($day) {
-    switch ($day) {
+// Function 4: SWITCH statement — responds to the day of the week
+function getDayMessage($dayInAWeek) {
+    switch ($dayInAWeek) {
         case "Monday":
-            return "Oh, it's Monday again.";
+            return "It's Monday. A fresh start!";
         case "Wednesday":
-            return "It's almost the weekend!";
+            return "It's Wednesday. Halfway there!";
         case "Friday":
-            return "Friday night, here we come!";
+            return "It's Friday! The weekend is near.";
+        case "Sunday":
+            return "It's Sunday. Time to relax.";
         default:
-            return "It's another day.";
+            return "It's just another day.";
     }
 }
 
-// Sample inputs
-$age = 20;
-$temperature = 39;
-$score = 85;
-$day = "Friday";
+// Sample input values
+$age = 18;
+$temperature = 38.2;
+$maritalStatus = "single";
+$dayInAWeek = "Friday";
 
-// Output
+// Display the results
 echo "Results:\n";
 echo checkAge($age) . "\n";
 echo checkTemperature($temperature) . "\n";
-echo evaluateScore($score) . "\n";
-echo getDayMessage($day) . "\n";
+echo checkMaritalStatus($maritalStatus) . "\n";
+echo getDayMessage($dayInAWeek) . "\n";
 
 ?>

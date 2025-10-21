@@ -1,17 +1,10 @@
 <?php
-
 header('Content-Type: application/json');
-
-
-$user_profile = [
-    "id"     => "1",
-    "name"   => "Theresa",
-    "email"  => "teresa@example.com",
+$user = [
+    "id" => 1,
+    "name" => "Maria",
+    "email" => "maria@example.com",
     "status" => "active"
 ];
-
-
-$json_response = json_encode($user_profile);
-echo $json_response;
-
+echo json_encode($user);
 ?>

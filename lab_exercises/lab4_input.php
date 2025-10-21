@@ -14,12 +14,12 @@ if ($data === null) {
     echo "Error: Could not decode JSON data or received empty input.\n";
 } elseif (isset($data['username']) && isset($data['password'])) {
     
-    $username = $data['username'];
+    $username = $data['username']; 
     $password = $data['password'];
 
-    echo "Username: " . $username . "\n";
-    echo "Password: " . $password . "\n";
-    
+    echo "Username: " . $username . "<br>";
+    echo "Password: " . $password . "<br>";
+
 } else {
     echo "Error: JSON data is missing 'username' or 'password' keys.\n";
 }

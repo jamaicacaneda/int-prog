@@ -1,8 +1,13 @@
 <?php
+
 $student = [
-    "name" => "Maria",
-    "age" => 21,
+    "name"  => "Maria",
+    "age"   => 21,
     "course" => "IT"
 ];
-echo json_encode($student);
+
+
+$json_string = json_encode($student);
+
+echo $json_string;
 ?>
